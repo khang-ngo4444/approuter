@@ -1,5 +1,4 @@
 'use client';
-
 import {
   UserGroupIcon,
   HomeIcon,
@@ -8,7 +7,6 @@ import {
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
-
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
 const links = [
@@ -28,7 +26,7 @@ export default function NavLinks() {
       {links.map((link) => {
         const LinkIcon = link.icon;
         return (
-         <Link
+          <Link
             key={link.name}
             href={link.href}
             className={clsx(
